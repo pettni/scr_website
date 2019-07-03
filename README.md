@@ -1,7 +1,7 @@
 Jekyll static conference site
 =========================
 
-Static website for academic conferences designed for easy maintenance, previously used for [SCR 2019](scr2019.caltech.edu).
+Static website for academic conferences designed for easy maintenance, previously used for [SCR 2019](http://scr2019.caltech.edu).
 
 # Documentation
 
