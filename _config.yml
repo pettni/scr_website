@@ -1,0 +1,36 @@
+# Site settings
+title: 2019 SoCal Robotics Symposium
+
+url: http://scr2019.caltech.edu/
+baseurl: ''
+
+conference_title: "Southern California Robotics Symposium"
+conference_title_short: "SCR"
+year: "2019"
+infoline_text: "Thanks for attending SCR 2019, see you again next year!"
+
+# Color settings
+color:
+  primary-dark: '#3D1419'
+  title: '#ebf0f4'
+  links: '#219ab3'
+  accent: '#B89E8F'
+
+# conference data
+background-image: img/afa2_desert_iso.png
+directions-link: http://directions.link.com
+map-embed: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.323048471302!2d-118.12734598467776!3d34.13807638058268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c4a7f5e60b13%3A0xc12af3fcb43bc03d!2sRamo+Auditorium!5e0!3m2!1sen!2sus!4v1546639172046
+organizer-email : organizer@email.com
+registration-page : http://registration.com
+upload-form: http://paperupload.com
+
+collections:
+  - invited_speakers
+  - organizers
+  - sessions
+  - papers
+  - advisors
+
+# Build settings
+markdown: kramdown
+permalink: pretty

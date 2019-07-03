@@ -1,0 +1,30 @@
+<!-- Schedule section -->
+      <div class="section scrollspy section-gray-section" id="schedule">
+        <div class="container">
+          <h4 class="center-align section-gray-header">Schedule</h4>
+
+          <div class="row">
+            <div class="col s12 m10 offset-m1 l10 offset-l1 section-gray-body">
+              <table class="schedule">
+                  {% for session in site.sessions %}
+                    {% assign session_speakers = site.invited_speakers | where:"session",{{session.name}} | sort: "priority" %}
+                    {% assign speakers_size = session_speakers | size %}                  
+                  <tr>
+                    <th scope="row"><time>{{session.time}}</time></th>
+                    <td>
+                    <h5>{{session.title}}</h5>
+	                  {% if speakers_size > 0 %}
+                        {% for speaker in session_speakers %}
+                          <b><a href="#" data-target={{speaker.id}} class="modal-trigger">{{speaker.name}}</a></b>{% if {{speaker.talk_title}} %}: <i>{{speaker.talk_title}}</i> {% endif %}<br/>
+                        {% endfor %}
+	                  {% else %}    
+                    {% endif %}
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>

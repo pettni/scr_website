@@ -1,0 +1,32 @@
+<!-- Speakers section -->
+      <div class="section scrollspy section-white-section" id="speakers">
+        <div class="container">
+          <h4 class="center-align section-white-header">Speakers</h4>
+
+          <div class="row">
+            <div class="col s12 m12 l12 section-white-body">
+              <p class="center">We are excited to announce this amazing lineup for the {{site.year}}  edition of {{site.conference_title_short}}!
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            {% assign invited_speakers_sorted = site.invited_speakers | sort:"order_number" %}            
+            {% for invited_speaker in invited_speakers_sorted %}
+            <a href="#" data-target={{invited_speaker.id}} class="modal-trigger">
+              <div class="col s12 m6 l3">
+                <div class="card hoverable">
+                  <div class="card-image">
+                    <img class="activator" src="{{invited_speaker.image}}">
+                    <span class="card-title" id="main-title">{{invited_speaker.name}}</span>              
+                  </div>
+                  <div class="card-content" id="secondary-title">
+                    <span class="card-title activator" id="secondary-title-text">{{invited_speaker.affiliation}}</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>

@@ -1,0 +1,15 @@
+      <div class="section scrollspy section-gray-section" id="about">
+        <div class="container">
+
+          <h5 class="center-align">Pictures from {{site.conference_title_short}} {{site.year}}</h5>
+
+          <div class="row">
+          {% for image in page.images %}
+            <div class="col s6 m3">
+              <img class="materialboxed responsive-img" src={{image.image_path}} style="padding-top: 10px" data-caption="{{image.caption}}">
+            </div>
+          {% endfor %}
+          </div>
+
+        </div>
+      </div>

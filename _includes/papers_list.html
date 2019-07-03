@@ -1,0 +1,53 @@
+<!-- Papers section -->
+      <div class="section scrollspy section-white-section" id="papers">
+        <div class="container">
+          <h4 class="center-align section-white-header">Papers</h4>
+
+          <div class="row">
+            <div class="col s12 m10 offset-m1 l10 offset-l1 section-white-body">
+              <p class="left">
+                We received many great submissions this year and accepted more contributions than we could fit in the Spotlight Session. Make sure to check out all contributions in the poster session! 
+              </p>
+            </div>
+          </div>
+
+          <h5 class="center-align">Presented in the Spotlight and Poster Sessions</h5>
+
+          <div class="row">
+            <div class="col s12 m10 offset-m1 l10 offset-l1 section-white-body">
+              <table class="papers striped">
+                <tbody>
+                    {% assign papers = site.papers | sort: 'time' %}
+                    {% for paper in papers %}
+                      {% if paper.spotlight == true %}
+                      <tr>
+                        <th>{{paper.time}}</th>
+                        <td>{{paper.number}}. <b>{{paper.author}}</b> <a href="#" data-target={{paper.id}} class="modal-trigger">{{paper.title}}</a></td>
+                      </tr>
+                      {%endif%}
+                    {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <h5 class="center-align">Presented in the Poster Session</h5>
+
+          <div class="row">
+            <div class="col s12 m10 offset-m1 l10 offset-l1 section-white-body">
+              <table class="posters striped">
+                <tbody>
+                    {% assign papers = site.papers | sort: 'number' %}
+                    {% for paper in papers %}
+                      {% if paper.spotlight == false %}
+                      <tr>
+                        <td>{{paper.number}}. <b>{{paper.author}}</b> <a href="#" data-target={{paper.id}} class="modal-trigger">{{paper.title}}</a></td>
+                      </tr>
+                      {%endif%}
+                    {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>

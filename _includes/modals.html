@@ -1,0 +1,29 @@
+<!-- Modals section -->
+
+    <!-- Speaker modals -->
+    {% for speaker in site.invited_speakers %}
+    <div id={{speaker.id}} class="modal">
+      <div class="modal-content">
+        <h4><a href="{{speaker.link}}">{{speaker.name}}</a> <small style="color: gray"><small>{{speaker.title}}, {{speaker.affiliation}}</small></small></h4>
+        <h5>{{speaker.talk_title}}</h5>
+        {{speaker.content | markdownify}}
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>     
+    {% endfor %}
+
+    <!-- Paper modals -->
+    {% for paper in site.papers %}
+      <div id={{paper.id}} class="modal">
+        <div class="modal-content">
+          <h4>{{paper.title}}</h4>
+          <h5>{{paper.author}}</h5>
+          {{paper.content | markdownify}}
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </div>     
+    {% endfor %}
